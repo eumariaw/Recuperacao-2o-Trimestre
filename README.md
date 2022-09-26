@@ -1,65 +1,80 @@
 # Desenvolvimento de Aplicações Web
 
-**Data de Apresentação: 10/12/2021**
+**Data de Apresentação: 07/10/2022**
 
 **Valor: 35 pontos**
 
-## Sistema Bibliotecário
+**Trabalho a ser desenvolvido em dupla**
 
-A biblioteca do COLTEC decidiu atualizar o sistema de consulta às obras existentes em seu acervo, que atualmente está defasado. 
-Para isso, a direção do colégio entrou em contato com o Setor de Informática no intuito de viabilizar a atualização do sistema.
+## Recuperação 2o Trimestre
 
-Seu grupo deverá apresentar um primeiro protótipo do sistema, com as seguintes funcionalidades implementadas:
+Neste trabalho de recuperação, você deverá utilizar os conhecimentos adquiridos no tópico de PHP para desenvolver um protótipo de um sistema de informação.
+A equipe poderá escolher um dos seguintes tópicos como tema de implementação do sistema:
 
-1. Cadastro de novas obras no acervo
-1. Exibição das últimas obras cadastradas
-1. Pesquisa às obras existentes
+- Lista de desejos, onde o usuário cadastraria e visualizaria uma lista de itens que ele deseja ganhar/comprar
+- Sistema Acadêmico, onde o aluno cadastraria as disciplinas junto das notas que ele obteve
+- Histórico de viagens, onde o usuário armazenaria uma lista de locais para onde ele viajou
+- Divisor de contas de restaurantes, o sistema calcula---com base no valor e número de pessoas---o valor de uma conta cadastrada no sistema, por pessoa
+- Diário, onde o usuário registra seus pensamentos e reflexões ao longo do dia
+- Livros e filmes favoritos, onde o usuário armazena uma lista de filmes e livros dos quais ele mais gostou de ler/assistir
+- Ficha de academia, onde o usuário cadastra uma lista com os exercícios a serem realizados em uma academia
+- Aplicativo de receitas, onde são armazenados as receitas culináreas do usuário
+- Rastreador de investimentos, onde o usuário cadastraria a lista de ativos que ele tem comprado/investido no momento
+- Histórico de vacinação, onde se cadastraria para um determinado usuário as vacinas que ele já tomou
+- colinha da eleição, onde o usuário cadastra para uma determinada eleição os números de seus candidatos
+- Greengo dictionary, um dicionário com gírias em outras línguas e seu significado em português
+- Palpites da Mega, um sistema que armazenaria os palpites que um usuário fez para seus jogos da mega sena
 
-Você pode verificar em mais detalhes cada uma das funcionalidades abaixo:
+Independente do tema, a equipe deverá implementar as seguintes funcionalidades:
 
-### Cadastro de novas obras
+1. Cadastro e login de usuários no sistema
+1. Cadastro de novos itens do sistema
+1. Exibição dos itens do sistema
 
-O seu sistema deverá suportar o cadastro a novas obras. 
-Para isso você deverá desenvolver uma interface que conterá um formulário de cadastro. 
+Você pode verificar em mais detalhes cada uma das funcionalidades abaixo.
+
+### Cadastro e login de usuários
+
+Para o cadastro de usuário, deverão ser fornecidos pelos menos os seguintes atributos:
+
+- Nome
+- Login
+- Senha
+- Email
+
+O armazenamento do cadastro deverá ser feito em arquivo.
+
+Já para o login, ele deverá ser feito através dos campos `login` e `senha` cadastrados anteriormente.
+A manutenção do login deverá ser feito por meio de sessão, sendo destruída toda vez que o usuário realizar um logout do sistema.
+
+### Cadastro de novos itens
+
+O usuário---uma vez logado---poderá realizar o cadastro de novos itens por meio de um formulário.
 Esse formulário deverá implementar mecanismos básicos de validação (tipo dos campos, formatação, etc.).
 
-Ainda, para cada obra deverão se cadastrados os seguintes campos:
+Em relação ao item a ser cadastrado, ele deverá ter pelo menos cinco atributos a serem definidos pela equipe de desenvolvimento, e deverão estar necessariamente atrelados ao usuário que os cadastrou.
+Os itens também deverão ser cadastrados em arquivo para posterior exibição.
 
-* Nome da obra
-* Resumo da obra
-* Nome do Autor
-* Nome da Editora
-* Nº de exemplares
-* Data de cadastro da obra
+### Exibição dos itens do sistema
 
-### Exibição das últimas obras cadastradas
-
-A página principal deverá listar as últimas obras cadastradas. 
-A listagem poderá ser feita de duas formas: [grade](https://www.saraiva.com.br/universitarios/informatica) ou [lista](https://www.amazon.com.br/s?k=domain+driven+design&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2). 
-Fica a critério do grupo definir como a listagem será feita.
-
-Ainda, deverá haver uma barra de busca no topo da página, que será utilizada na funcionalidade a seguir.
-
-### Pesquisa às obras existentes
-
-A barra presente na página principal deverá permitir fazer a pesquisa das obras existentes na biblioteca. 
-Essa pesquisa deverá abranger a busca pelo nome, autor ou editora. 
-Os resultados da pesquisa deverão ser exibidos em uma nova página de listagem, que deverá mostrar a quantidade de registros pesquisados, seguidos da lista obtida a partir da busca.
+Assim que fizer o login, o usuário ser redirecionado a tela de exibição.
+Esta tela deverá exibir todos os itens cadastrados pelo usuário em formato tabular, onde cada linha apresentará todos os atributos do item cadastrado.
+Por fim, deverá ser implementado uma barra de pesquisa no topo desta página.
+Essa barra deverá realizar a pesquisa com base em um dos atributos do item do sistema.
 
 ## Entrega
 
-A apresentação do trabalho ocorrerá no dia **10/12/2021**, por meio de um pull-request.
-O aluno deverá também gravar um vídeo fazendo a demonstração das funcionalidades implementadas no projeto.
-
+A apresentação do trabalho ocorrerá no dia **07/10/2022**, por meio de uma apresentação no laboratório amarelo.
 **OBS: O código quanto e apresentação serão levados em consideração no momento da avaliação!**
 
 ## Pilha de Tecnologias
 
-Você estará livre para utilizar as bibliotecas e frameworks que considerar necessários. O uso de tais recursos inclusive é incentivado!!
-
-Contudo, o desenvolvimento do trabalho **deve** englobar, de alguma forma, os seguintes conceitos:
+Você estará livre para utilizar as bibliotecas e frameworks que considerar necessários. 
+O uso de tais recursos inclusive é incentivado!!
+**Porém, é fundamental que a equipe saiba explicar o que essa ferramenta faz no sistema, pra que ela serve, e como ela funciona!!**
+Além disso, desenvolvimento do trabalho **deve** englobar os seguintes conceitos:
 
 * HTML
 * PHP: Classes, funções, etc.
-* PHP: Sessões e Cookies
+* PHP: Sessões/Cookies
 * PHP: Arquivos
